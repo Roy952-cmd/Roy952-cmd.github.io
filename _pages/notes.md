@@ -5,12 +5,7 @@ permalink: /notes/
 author_profile: true
 ---
 
-{% include base_path %}
+Expository notes and seminar talks. Comments and corrections welcome.
 
-## Interests
-
-Riemannian geometry and geometric analysis. ...
-
-## Preprints
-
-## Talks
+- [Nilsoliton metrics and Einstein nilradicals](/files/nilsolitons.pdf) — seminar notes, 2026
+- [The Kempf–Ness theorem for real reductive groups](/files/kempf-ness.pdf) — draft
