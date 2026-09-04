@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fifth year PhD student in mathematics at [University of Oklahoma], working with [Dr. Michael Jablonski] in
+I'm a fifth year PhD student in mathematics at University of Oklahoma, working with Dr. Michael Jablonski in
 Riemannian geometry and geometric analysis. 
 
 ## News
