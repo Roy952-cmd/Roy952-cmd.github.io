@@ -54,11 +54,11 @@ html[data-theme="dark"] {
     --global-thead-color                : #{$background-lighter};
 }
 /* Twilight theme for the site */
-$twilight-background        : #0f1a2e;
+$twilight-background        : #1d4e89;
 $twilight-background-light  : mix(#fff, $twilight-background, 80%);
 $twilight-background-lighter: mix(#fff, $twilight-background, 90%);
-$twilight-text              : #dce4f0;
-$twilight-border            : #34486b;
+$twilight-text              : #f2f6fc;
+$twilight-border            : #5b83b8;
 
 html[data-theme="twilight"] {
     --global-base-color                 : #{$primary-color};
@@ -69,8 +69,8 @@ html[data-theme="twilight"] {
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : #{$light-gray};
-    --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
+    --global-link-color                 : #7fd4ee;
+    --global-link-color-hover           : #a8e3f5;
     --global-link-color-visited         : #{$link-light};
     --global-masthead-link-color        : #{$twilight-text};
     --global-masthead-link-color-hover  : #{$primary-color};
