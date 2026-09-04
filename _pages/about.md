@@ -7,8 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fifth year PhD student in mathematics at University of Oklahoma, working with Dr. Michael Jablonski in
-Riemannian geometry and geometric analysis. 
+Hello and welcome to my website!
+
+I am  currently a 5th Year Phd student at the University of Oklahoma working in Riemannian Geometry and Geometric analysis with Dr. Michael Jablonski. Most of the time I am thinking about Einstein Manifolds,  Ricci soliton metrics, Ricci flow, etc.  In my research I use techniques and ideas from  geometric flows, real geometric invariant theory, lie theory, symmetric Spaces,  etc.
 
 ## News
 
