@@ -30,46 +30,72 @@
 
 <script>
   (function () {
-    var t = localStorage.getItem("theme");
-    if (t === "dark" || t === "twilight") {
-      document.documentElement.setAttribute("data-theme", t);
+    function byClock() {
+      var h = new Date().getHours();
+      if (h >= 6 && h < 18) { return "light"; }
+      if (h >= 18 && h < 21) { return "twilight"; }
+      return "dark";
+    }
+    var s = localStorage.getItem("theme");
+    var theme = (s === "light" || s === "twilight" || s === "dark") ? s : byClock();
+    if (theme !== "light") {
+      document.documentElement.setAttribute("data-theme", theme);
     }
   })();
 </script>
 
 <script>
   window.addEventListener("load", function () {
-    var ORDER = ["light", "twilight", "dark"];
-    var ICONS = { light: "fa-sun", twilight: "fa-cloud-moon", dark: "fa-moon" };
+    var ORDER = ["auto", "light", "twilight", "dark"];
+    var ICONS = {
+      auto:     "fa-clock",
+      light:    "fa-sun",
+      twilight: "fa-cloud-moon",
+      dark:     "fa-moon"
+    };
 
-    function current() {
-      var t = document.documentElement.getAttribute("data-theme");
-      return (t === "dark" || t === "twilight") ? t : "light";
+    function byClock() {
+      var h = new Date().getHours();
+      if (h >= 6 && h < 18) { return "light"; }
+      if (h >= 18 && h < 21) { return "twilight"; }
+      return "dark";
     }
 
-    function paint(theme) {
+    function mode() {
+      var s = localStorage.getItem("theme");
+      return (s === "light" || s === "twilight" || s === "dark") ? s : "auto";
+    }
+
+    function paint() {
+      var m = mode();
+      var theme = (m === "auto") ? byClock() : m;
       if (theme === "light") {
         document.documentElement.removeAttribute("data-theme");
       } else {
         document.documentElement.setAttribute("data-theme", theme);
       }
       var icon = document.getElementById("theme-icon");
-      if (icon) { icon.className = "fa-solid " + ICONS[theme]; }
+      if (icon) { icon.className = "fa-solid " + ICONS[m]; }
     }
 
-    paint(current());
+    paint();
 
     var toggle = document.getElementById("theme-toggle");
-    if (!toggle) { return; }
+    if (toggle) {
+      if (window.jQuery) { window.jQuery(toggle).off("click"); }
+      toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        var next = ORDER[(ORDER.indexOf(mode()) + 1) % ORDER.length];
+        if (next === "auto") {
+          localStorage.removeItem("theme");
+        } else {
+          localStorage.setItem("theme", next);
+        }
+        paint();
+      });
+    }
 
-    if (window.jQuery) { window.jQuery(toggle).off("click"); }
-
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      var next = ORDER[(ORDER.indexOf(current()) + 1) % ORDER.length];
-      paint(next);
-      localStorage.setItem("theme", next);
-    });
+    setInterval(paint, 60000);
   });
 </script>
 
