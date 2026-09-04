@@ -9,10 +9,10 @@ $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 
-$background                 : #474747;
+$background                 : #121212;
 $background-light           : mix(#fff, $background, 80%);
 $background-lighter         : mix(#fff, $background, 90%);
-$text                       : #ffffff;
+$text                       : #e6e6e6;
 $link                       : #0ea1c5;
 $link-dark                  : mix(#000, $link, 25%);
 $link-light                 : mix(#fff, $link, 25%);
@@ -53,4 +53,28 @@ html[data-theme="dark"] {
     --global-text-color-light           : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
 }
+/* Twilight theme for the site */
+$twilight-background        : #0f1a2e;
+$twilight-background-light  : mix(#fff, $twilight-background, 80%);
+$twilight-background-lighter: mix(#fff, $twilight-background, 90%);
+$twilight-text              : #dce4f0;
+$twilight-border            : #34486b;
 
+html[data-theme="twilight"] {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$twilight-background};
+    --global-footer-bg-color            : #{$twilight-background};
+    --global-border-color               : #{$twilight-border};
+    --global-dark-border-color          : #{$twilight-background-light};
+    --global-code-background-color      : #fafafa;
+    --global-code-text-color            : #{$darker-gray};
+    --global-fig-caption-color          : #{$light-gray};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #{$link-light};
+    --global-masthead-link-color        : #{$twilight-text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$twilight-text};
+    --global-text-color-light           : #f3f3f3;
+    --global-thead-color                : #{$twilight-background-lighter};
+}
