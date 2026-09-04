@@ -7,10 +7,14 @@ author_profile: true
 
 {% include base_path %}
 
-## Interests
+## For a general audience
 
-Riemannian geometry and geometric analysis. ...
+A short, jargon-free account of what you think about and why it's interesting.
 
-## Preprints
+## For mathematicians
 
-## Talks
+Technical description, keywords, and open questions.
+
+## Preprints and papers
+
+1. *Title*, with Coauthor. Submitted. [arXiv:XXXX.XXXXX](https://arxiv.org/abs/...)
